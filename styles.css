@@ -102,99 +102,147 @@ p {
 }
 
 /* Card Styles */
-.card {
+.card { background-color: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  overflow: hidden;
+  margin-bottom: 20px;
   /* TODO: Add card styles */
   /* HINT: Use background-color, border-radius, box-shadow, transition */
 }
 
-.card:hover {
+.card:hover { box-shadow: 0 8px 16px rgba(67, 97, 238, 0.15);
+  transform: translateY(-4px) scale(1.02);
   /* TODO: Add hover styles for card */
   /* HINT: Use transform and box-shadow */
 }
 
-.card-img {
+.card-img { width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+  display: block;
   /* TODO: Add card image styles */
   /* HINT: Set width, height, and object-fit */
 }
 
-.card-content {
+.card-content { padding: 20px;
   /* TODO: Add card content styles */
   /* HINT: Add padding */
 }
 
-.card-title {
+.card-title { font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: var(--primary);
   /* TODO: Add card title styles */
   /* HINT: Set font-size, margin, and color */
 }
 
-.card-text {
+.card-text {color: var(--gray);
+  margin-bottom: 10px;
   /* TODO: Add card text styles */
   /* HINT: Set color and margin */
 }
 
 /* Button Styles */
-.btn {
+.btn { display: inline-flex;
+  align-items: center;
+  padding: 0.7em 1.4em;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+  font-size: 1rem;
+  gap: 0.4em;
   /* TODO: Add button styles */
   /* HINT: Use display, padding, background-color, color, border, border-radius, cursor, transition */
 }
 
-.btn:hover {
+.btn:hover {background-color: var(--secondary);
   /* TODO: Add button hover styles */
   /* HINT: Change background-color */
 }
 
-.btn-success {
+.btn-success { background-color: var(--success);
+  color: var(--dark);
   /* TODO: Add success button styles */
   /* HINT: Change background-color */
 }
 
-.btn-warning {
+.btn-warning {background-color: var(--warning);
+  color: var(--white);
   /* TODO: Add warning button styles */
   /* HINT: Change background-color */
 }
 
-.btn-info {
+.btn-info {background-color: var(--info);
+  color: var(--white);
   /* TODO: Add info button styles */
   /* HINT: Change background-color */
 }
 
-.btn-outline {
+.btn-outline { background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
   /* TODO: Add outline button styles */
   /* HINT: Transparent background with border and specific text color */
 }
 
-.btn-outline:hover {
+.btn-outline:hover { background-color: var(--primary);
+  color: var(--white);
   /* TODO: Add hover styles for outline button */
   /* HINT: Change background-color and text color */
 }
 
-.btn-group {
+.btn-group { display: flex;
+  gap: 10px;
   /* TODO: Add button group styles */
   /* HINT: Use display and gap */
 }
 
 /* Chip Styles */
-.chips-container {
+.chips-container {display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
   /* TODO: Add chips container styles */
   /* HINT: Use display, flex-wrap, gap, and margin */
 }
 
-.chip {
+.chip { display: inline-flex;
+  align-items: center;
+  padding: 0.5em 1em;
+  background-color: var(--light-gray);
+  border-radius: 16px;
+  font-size: 1em;
+  color: var(--dark);
+  cursor: pointer;
+  transition: var(--transition);
   /* TODO: Add chip styles */
   /* HINT: Use display, align-items, padding, background-color, border-radius, font-size, color, and cursor */
 }
 
-.chip.active {
+.chip.active {background-color: var(--primary);
+  color: var(--white);
   /* TODO: Add active chip styles */
   /* HINT: Change background-color and color */
 }
 
-.chip i {
+.chip i { margin-right: 0.4em;
   /* TODO: Add icon styles within chips */
   /* HINT: Use margin-right */
 }
 
-.chip .close {
+.chip .close {margin-left: 0.4em;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--gray);
+  background: none;
+  border: none;
   /* TODO: Add close button styles within chips */
   /* HINT: Use margin-left, cursor, and font-weight */
 }
@@ -293,32 +341,63 @@ input:checked + .slider-round:before {
 }
 
 /* Form Styles */
-.form-group {
+.form-group {margin-bottom: 18px;
   /* TODO: Add form group styles */
   /* HINT: Add margin-bottom */
 }
 
-.form-label {
+.form-label { display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: var(--text-color);
   /* TODO: Add form label styles */
   /* HINT: Use display, margin, and font-weight */
 }
 
-.form-input {
+.form-input {width: 100%;
+  padding: 0.7em;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border var(--transition), box-shadow var(--transition);
+  margin-bottom: 8px;
+  background-color: var(--light);
+  color: var(--dark);
+}
   /* TODO: Add form input styles */
   /* HINT: Use width, padding, border, border-radius, font-size, transition */
 }
 
-.form-input:focus {
+.form-input:focus {focus{
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.15);
   /* TODO: Add focus styles for form inputs */
   /* HINT: Use outline, border-color, and box-shadow */
 }
 
-.form-select {
+.form-select {width: 100%;
+  padding: 0.7em;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: var(--light);
+  color: var(--dark);
+  margin-bottom: 8px;
   /* TODO: Add form select styles */
   /* HINT: Similar to form-input, with additional background-color */
 }
 
-.form-textarea {
+.form-textarea { width: 100%;
+  min-height: 90px;
+  padding: 0.7em;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: var(--light);
+  color: var(--dark);
+  resize: vertical;
+  margin-bottom: 8px;
   /* TODO: Add textarea styles */
   /* HINT: Similar to form-input, with additional min-height and resize properties */
 }
@@ -418,22 +497,34 @@ input:checked + .slider-round:before {
 }
 
 /* Navigation Styles */
-.nav {
+.nav {display: flex;
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  box-shadow: var(--card-shadow);
   /* TODO: Add navigation styles */
   /* HINT: Use display, background-color, border-radius, overflow, and margin-bottom */
 }
 
-.nav-item {
+.nav-item { padding: 1em 2em;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: var(--transition);
+  font-weight: 500;
+  cursor: pointer;
   /* TODO: Add navigation item styles */
   /* HINT: Use padding, color, text-decoration, transition */
 }
 
-.nav-item:hover {
+.nav-item:hover { background-color: var(--light-gray);
   /* TODO: Add hover styles for nav items */
   /* HINT: Change background-color */
 }
 
-.nav-item.active {
+.nav-item.active {background-color: var(--primary);
+  color: var(--white);
+  font-weight: bold;
   /* TODO: Add styles for active nav item */
   /* HINT: Use background-color and font-weight */
 }
@@ -740,27 +831,33 @@ input:checked + .slider-round:before {
   /* HINT: Use animation property */
 }
 
-.slide-in {
+.slide-in {animation: slideIn 0.6s ease;
+
   /* TODO: Add slide-in animation */
   /* HINT: Use animation property */
 }
 
-.bounce {
+.bounce { animation: bounce 1s;
   /* TODO: Add bounce animation */
   /* HINT: Use animation property */
 }
 
-@keyframes fadeIn {
+@keyframes fadeIn {animation: fadeIn 0.7s ease-in;
   /* TODO: Add fadeIn keyframes */
   /* HINT: Define from and to states with opacity */
 }
 
-@keyframes slideIn {
+@keyframes slideIn { from { opacity: 0; }
+  to { opacity: 1;
   /* TODO: Add slideIn keyframes */
   /* HINT: Define from and to states with transform and opacity */
 }
 
-@keyframes bounce {
+@keyframes bounce { 0%, 100% { transform: translateY(0); }
+  20% { transform: translateY(-10px); }
+  40% { transform: translateY(-20px); }
+  60% { transform: translateY(-10px); }
+  80% { transform: translateY(0);}
   /* TODO: Add bounce keyframes */
   /* HINT: Define keyframe percentages with transform */
 }
@@ -850,7 +947,19 @@ input:checked + .slider-round:before {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 768px) { .component-grid {
+    grid-template-columns: 1fr;
+  }
+  .btn-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .nav {
+    flex-direction: column;
+  }
+  .tab-header {
+    flex-direction: column;
+  }
   /* TODO: Add responsive styles for mobile */
   /* HINT: Adjust component-grid, btn-group, nav, and tab-header */
 

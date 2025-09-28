@@ -1,0 +1,18 @@
+# Design Decisions for Lab 5
+
+## Approach
+- Used provided CSS variables for color consistency and easy theming.
+- Started with basic structure and gradually added transitions, shadows, and hover states.
+- Ensured all components are responsive and mobile-friendly using media queries.
+- Used semantic HTML for accessibility.
+
+## Challenges
+- Making cards look modern without using frameworks.
+- Getting the navigation bar to look good and be flexible on mobile.
+- Ensuring button variants are visually distinct but consistent.
+
+## Resources
+- MDN CSS Reference
+- CSS Tricks
+  ## Author
+  - Richmann Guidao-oab 223012351
